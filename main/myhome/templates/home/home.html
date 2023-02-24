@@ -1,0 +1,15 @@
+
+<h3>Home</h3>
+
+<form action="">
+{{ form }}
+<input type="submit" value="search">
+
+</form>
+
+<p>
+
+    {% for result in results %}
+        <p><a href="{% url 'home:book_detail' result.meta.id %}">{{ result.name }}</a></p>
+    {% endfor %}
+</p>
